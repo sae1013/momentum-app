@@ -9,23 +9,31 @@ const onLoginSubmit = (event)=>{
     paintGreetings(username);
     localStorage.setItem("username",username);
 }
-const paintGreetings = (username)=>{
-    greeting.innerText = `Hello ${ username}`;
+const paintGreetings = (username)=>{ 
+    const date=new Date();
+    const hour = date.getHours();
+    let day;
+    if(4<=hour && hour<12){
+        day = 'Good Morning !'
+    }else if(12<=hour && hour <18){
+        day = 'Good Afternoon !'
+    }else{
+        day = 'Good Evening !' 
+    }
+    greeting.innerText = `${day} ${ username}`;
     greeting.classList.remove('hidden');
 }
 const onGreeting = () => {
     const savedUsername = localStorage.getItem("username");
     if(savedUsername){
-        loginForm.classList.add('hidden');
         paintGreetings(savedUsername);
-    }else{
-        loginForm.classList.remove('hidden');
+        loginForm.classList.add('hidden');
+    }else{ 
         greeting.classList.add('hidden');
     }
 }
 loginForm.addEventListener('submit', onLoginSubmit);
 
-(function(){
+(()=>{
     onGreeting();
 })();
-

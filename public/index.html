@@ -7,18 +7,42 @@
     <title>Document</title>
 </head>
 <body>
-    <form id="login-form">
-        <input type="text"
-               required
-               maxlength="15"
-               placeholder='What is your name?'>
-        <button>Log in</button>
-    </form>
-    <h2 id="clock">00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
+    <div class="backdrop">
+    </div>
 
+    <div class="background">
+
+    </div>
+
+    <div class="container">
+        <h2 id="clock">00:00</h2>
+        <form id="login-form">
+            <input type="text"
+                required
+                maxlength="15"
+                placeholder='What is your name?'>
+            <button>Log in</button>
+        </form>
+        <h1 id="greeting" class="hidden"></h1>
+        <form id="todo-form">
+            <input type="text" placeholder="What is your schedule?">    
+        </form>
+        <ul id="todo-list">
+        </ul>
+    </div>
+    <footer>
+        <div id="quote">
+            <span></span>
+            <span></span>
+        </div>
+    </footer>
+    
 
     <script src="../src/js/greeting.js"></script>
     <script src="../src/js/clock.js"></script>
+    <script src="../src/js/quote.js"></script>
+    <script src="../src/js/background.js"></script>
+    <script src="../src/js/todo.js"></script>
+    <script src="../src/js/weather.js"></script>
 </body>
 </html>

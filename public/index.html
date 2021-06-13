@@ -7,13 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="backdrop">
+    <div class="backdrop"></div>
+    <div class="background"></div>
+    
+    <div id="weather">
+        <span class="city"></span>
+        <span class="temperature"></span>
+        <span class="cur-temperature"></span>
+
     </div>
-
-    <div class="background">
-
-    </div>
-
     <div class="container">
         <h2 id="clock">00:00</h2>
         <form id="login-form">
@@ -38,11 +40,12 @@
     </footer>
     
 
-    <script src="../src/js/greeting.js"></script>
-    <script src="../src/js/clock.js"></script>
-    <script src="../src/js/quote.js"></script>
-    <script src="../src/js/background.js"></script>
-    <script src="../src/js/todo.js"></script>
-    <script src="../src/js/weather.js"></script>
+    <script type="module" src="../src/js/greeting.js"></script>
+    <script type="module" src="../src/js/clock.js"></script>
+    <script type="module" src="../src/js/quote.js"></script>
+    <script type="module" src="../src/js/background.js"></script>
+    <script type="module" src="../src/js/todo.js"></script>
+    <script type="module" src="../src/js/weather.js"></script>
+    <script type="module" src="../src/js/env.js"></script>
 </body>
 </html>
